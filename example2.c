@@ -137,6 +137,7 @@ int main(int argc, char *argv[])
     }
 
     printf("\n");
+    behaviourtree_tick(tree, (void *)&ctx);
 
     return 0;
 }
