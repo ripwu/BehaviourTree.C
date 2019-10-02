@@ -7,21 +7,21 @@ void *node_list[2] = { 0 };
 void example_enter(void *node, void *object, struct node_operations *ops)
 {
     int *ctx = (int *)object;
-    *ctx = *ctx + 1;
+    *ctx += 1;
     printf("example_enter %p %d\n", node, *ctx);
 }
 
 void example_exit(void *node, void *object, struct node_operations *ops)
 {
     int *ctx = (int *)object;
-    *ctx = *ctx + 1;
+    *ctx += 1;
     printf("example_exit %p %d\n", node, *ctx);
 }
 
 void example_tick(void *node, void *object, struct node_operations *ops)
 {
     int *ctx = (int *)object;
-    *ctx = *ctx + 1;
+    *ctx += 1;
     printf("example_tick %p %d\n", node, *ctx);
 
     if (node == node_list[0])
